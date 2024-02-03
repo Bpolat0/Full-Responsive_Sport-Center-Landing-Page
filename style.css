@@ -1,0 +1,1841 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    overflow-x: hidden;
+}
+
+
+/* Header Section Start */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(Resimler/hero-man.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Nav Section Start */
+nav {
+    display: flex;
+    width: 100%;
+    padding: 1% 20%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav img {
+    width: 250px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a:hover {
+    color: #F39C12;
+    border-radius: 7px;
+    transition: 0.7s;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+}
+
+#join-button {
+    background-color: #F39C12;
+    padding: 5px 20px;
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+#join-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.7s;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    width: 35px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .bar,
+.hamburger::after,
+.hamburger::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+
+}
+
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 9;
+    background-color: #355592;
+    padding-top: 120px;
+    transition: 0.7s;
+}
+
+.mobile-nav.is-active {
+    left: 0;
+}
+
+.mobile-nav li {
+    list-style: none;
+    text-align: center;
+}
+
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #6180bb;
+    border-radius: 7px;
+}
+
+.mobile-nav a:hover {
+    background-color: #759feb;
+    transition: 0.7s;
+}
+
+.mobile-nav #join-button {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+}
+
+.mobile-nav #join-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.7s;
+}
+
+
+
+
+
+
+
+
+
+/* Nav Section End */
+
+
+/* Hero Text Section Start */
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 20%;
+    justify-content: space-between;
+    align-items: left;
+    color: #fff;
+    gap: 1px;
+}
+
+.power {
+    display: inline-block;
+    box-sizing: content-box;
+    background-color: #355592;
+    border-radius: 5px;
+    padding: 0% 2%;
+    margin-top: 10%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.power-h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 100px;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    line-height: 120px;
+}
+
+.power-p {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 0% 5%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1px;
+    border: none;
+}
+
+#signup-b {
+    display: inline-block;
+    box-sizing: content-box;
+    background-color: #355592;
+    border-radius: 2px;
+    border: none;
+    padding: 1% 2%;
+    margin-right: 5%;
+    margin-top: 1%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#signup-b:hover {
+    background-color: #F39C12;
+    transition: 0.7s;
+    box-shadow: 0 5px 15px #F39C12;
+}
+
+#detail-b {
+    display: inline-block;
+    box-sizing: content-box;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: #fff;
+    border-radius: 2px;
+    border: 1px solid #fff;
+    padding: 1% 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#detail-b:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: 0.7s;
+    box-shadow: 0 5px 15px #F39C12;
+}
+
+/* Hero Text Section End */
+
+/* Header Section End */
+
+/* Info Cards Section Start */
+
+.info-cards {
+    width: 100%;
+    background-color: #F1F8FF;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    padding: 2% 20%;
+
+}
+
+.info-cards .icards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5% 6%;
+    height: 150px;
+    width: 300px;
+    background-color: #FFFFFF;
+    border-radius: 7px;
+}
+
+.icards span {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #355592;
+}
+
+/* Info Cards Section End */
+
+/* Our Classes Info Section Start*/
+
+/* Top Box Start*/
+
+#classes {
+    padding-top: 100px; /* Adjust this value as needed */
+    margin-top: 0px; /* Should be the same as padding-top */
+}
+
+.our-classes {
+    background: linear-gradient(75deg, #FFFFFF 40%, #F6F6F6 40%);
+    color: #355592;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 3%;
+    padding: 0% 20%;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.classes-h {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    padding: 0% 20%;
+    font-size: 20px;
+    font-weight: 800;
+
+}
+
+.classes-h h1 {
+    position: relative;
+    margin: 5% auto;
+}
+
+.classes-h p {
+    font-size: 15px;
+    color: #4E4E4E;
+
+}
+
+.classes-h h1::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5px;
+    width: 75px;
+    background-color: #F39C12;
+    border-radius: 5px;
+}
+
+/* Top Box End*/
+
+/* Classes Cards Start*/
+
+.classes-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12%;
+    padding: 2% 20%;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+.classes-cards button {
+    background-color: #355592;
+    padding: 5px 20px;
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 7px;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.classes-cards button:hover {
+    background-color: #F39C12;
+    transition: 0.7s;
+    box-shadow: 0 5px 15px #F39C12;
+}
+
+.classes-cards button.active {
+    background-color: #F39C12;
+    transition: 0.7s;
+    box-shadow: 0 5px 15px #F39C12;
+}
+
+.classes-cards button.active::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.classes-cards button.active::after {
+    border-top: 10px solid #F39C12;
+    transition: 0.7s;
+    box-shadow: 0 5px 50px #F39C12;
+}
+
+/* Classes Cards End*/
+
+/* Classes Info Start*/
+
+.classes-hero {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: #4E4E4E;
+    font-size: small;
+    padding: 2% 2%;
+    gap: 10px;
+}
+
+.info-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.info-img img {
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.info-yoga {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    color: #4E4E4E;
+    font-size: small;
+    gap: 15px;
+    padding: 2% 10%;
+}
+
+#week-program {
+    line-height: 3;
+}
+
+
+/* Classes Info End*/
+
+/* Our Classes Info Section End*/
+
+/* BMI Calculator Section Start*/
+
+/* BMI Calculator Start*/
+
+.bmi-calculator {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: #4E4E4E;
+    padding: 1% 30%;
+    gap: 200px;
+    font-size: 15px;
+    font-weight: 800;
+    margin: 2% 0%;
+}
+
+.info-bmi {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    gap: 15px;
+    font-size: small;
+}
+
+
+.info-bmi h1 {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    color: #355592;
+}
+
+.input-bmi {
+    display: flex;
+    gap: 10px;
+}
+
+.bmi-img {
+    width: 100%;
+    min-width: 450px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bmi-img img {
+    width: 450px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.bmi-img::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #F39C12;
+    /* Okun rengi */
+    position: absolute;
+    top: 100%;
+    left: var(--bmi-position);
+    transform: translateX(-50%);
+}
+
+
+/* BMI Calculator End*/
+
+/* BMI Calculator Section End*/
+
+/* Trainers Section Start*/
+
+.trainers {
+    display: flex;
+    background-color: #F1F8FF;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3%;
+    padding: 2% 20%;
+    z-index: 1;
+    font-size: larger;
+    font-weight: 800;
+}
+
+.trainer-hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3%;
+    padding: 2% 20%;
+    color: #4E4E4E;
+}
+
+.trainer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: small;
+    padding: 2% 2%;
+    gap: 10px;
+}
+
+.trainer-info h1 {
+    position: relative;
+    margin: 5% auto;
+    font-size: 30px;
+    color: #355592;
+}
+
+.trainer-info h1::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5px;
+    width: 75px;
+    background-color: #F39C12;
+    border-radius: 5px;
+}
+
+.trainer-cards {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12%;
+    padding: 2% 20%;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    border: solid 2px #F39C12;
+    border-radius: 7px;
+    position: relative;
+
+}
+
+.trainer-cards .cards img {
+    width: 300px;
+    height: 100%;
+    border-radius: 7px;
+    z-index: 3;
+}
+
+.cards::before {
+    content: "";
+    width: 100%;
+    height: 104%;
+    background: #355592;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translateY(-50%) scaleX(0.3);
+    transition: all 0.3s ease 0s;
+}
+
+.cards::after {
+    content: "";
+    width: 106%;
+    height: 104%;
+    background: #355592;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%) scaleY(0.25);
+    transition: all 0.3s ease 0s;
+}
+
+.cards:hover::before {
+    transform: translateY(-50%) scaleX(0.6);
+}
+
+.cards:hover::after {
+    transform: translate(-50%, -50%) scaleY(0.6);
+}
+
+.cards:hover img::after {
+    content: "";
+    width: 100px;
+    height: 1000px;
+    background: #355592;
+    position: absolute;
+    z-index: 2;
+}
+
+.trainer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #355592;
+    color: #fff;
+    width: 280px;
+    height: 150px;
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    visibility: hidden;
+    transition: all 0.5 ease 0.5s;
+}
+
+.trainer-cards .cards:hover .trainer-content {
+    visibility: visible;
+}
+
+
+/* Trainers Section End*/
+
+/* Purchase Section Start*/
+
+.purchase {
+    display: flex;
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3%;
+    padding: 0% 15%;
+    font-size: 15px;
+    font-weight: 800;
+    z-index: 1;
+}
+
+.purchase-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3%;
+    padding: 2% 60px;
+    color: #4E4E4E;
+}
+
+.purchase-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2% 2%;
+    gap: 10px;
+}
+
+.purchase-info h1 {
+    position: relative;
+    margin: 5% auto;
+    color: #355592;
+
+}
+
+.purchase-info h1::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5px;
+    width: 75px;
+    background-color: #F39C12;
+    border-radius: 5px;
+}
+
+.purchase-cards {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2% 2%;
+}
+
+.purchase-cards .p-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 7px;
+    position: relative;
+    width: 250px;
+    height: 100%;
+    padding: 0% 2%;
+    margin: 2% 1%;
+    box-shadow: 0 1px 10px #c1b9b9;
+}
+
+.p-card img {
+    width: 250px;
+    height: 100%;
+    border-radius: 7px;
+    z-index: 3;
+}
+
+.add-to-cart {
+    display: flex;
+    width: 250px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+} 
+
+.add-to-cart button {
+    background-color: #FFFFFF;
+    padding: 5px 20px;
+    margin: 10px;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 7px;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+}
+
+.p-card:hover, .add-to-cart:hover {
+    background-color: #355592;
+    color: #ffffff;
+    transition: 0.1s;
+    box-shadow: 0 5px 15px #F39C12;
+    cursor: pointer;
+}
+
+.add-to-cart:hover{
+    box-shadow: none;
+}
+
+.p-card:hover .add-to-cart button {
+    color: #ffffff;
+    background-color: #355592;
+}
+
+.add-to-cart img {
+    width: 32px;
+    height: 100%;
+    border-radius: 7px;
+    z-index: 3;
+}
+
+.p-card:hover .add-to-cart img {
+    filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(306deg) brightness(103%) contrast(101%);
+    transition: 0.7s;
+}
+
+.trainer-cards .cards:hover .trainer-content {
+    visibility: visible;
+}
+
+.price {
+    text-decoration: line-through;
+}
+
+
+
+/* Purchase Section End*/
+
+/* Review Section Start*/
+
+.review {
+    display: flex;
+    background-color: #F1F8FF;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3%;
+    padding: 0% 15%;
+    font-size: 15px;
+    font-weight: 800;
+    z-index: 1;
+}
+
+.review-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3%;
+    padding: 2%;
+    color: #4E4E4E;
+}
+
+.review-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2% 2%;
+    gap: 15px;
+}
+
+.review-info h1 {
+    position: relative;
+    margin: 5% auto;
+    color: #355592;
+}
+
+.review-info h1::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5px;
+    width: 75px;
+    background-color: #F39C12;
+    border-radius: 5px;
+}
+
+.review-cards {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12%;
+    margin-bottom: 2%;
+}
+
+.r-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+}
+
+.r-card-top h1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.r-card-top p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.r-card-top img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.r-card-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: #355592;
+    color: #FFFFFF;
+    font-weight: 400;
+    padding: 3% 6%;
+    margin: 2% 0.5%;
+    position: relative;
+}
+
+.r-card-bottom::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 40px solid #8096BE;
+    border-bottom: 40px solid transparent;
+    top: 100%;
+    left: 0%;
+}
+
+.r-card-bottom::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 40px solid #8096BE;
+    border-bottom: 40px solid transparent;
+    top: 100%;
+    right: 0%;
+}
+
+/* Review Section End*/
+
+/* Contact Us Section Start*/
+
+.contact-us {
+    display: flex;
+    background-color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3%;
+    padding: 0% 15%;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.contact-hero {
+    color: #4E4E4E;
+}
+
+.contact-info {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0% 2%;
+    margin: 1% 0%;
+    gap: 15px;
+}
+
+.contact-info h1 {
+    position: relative;
+    margin: 5% auto;
+    color: #355592;
+}
+
+.contact-info h1::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 5px;
+    width: 75px;
+    background-color: #F39C12;
+    border-radius: 5px;
+}
+
+.contact-form {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    text-align: left;
+    gap: 50px;
+    padding: 0% 2%;
+    margin: 2% 0%;
+}
+
+.form-info {
+    display: flex;
+
+    flex-direction: column;
+    text-align: left;
+
+}
+
+.form-info-content {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    text-align: left;
+    gap: 50px;
+    padding: 2% 2%;
+    margin: 2% 0%;
+}
+
+.appointment-form {
+    display: flex;
+    text-align: left;
+    gap: 15px;
+    padding: 3% 0%;
+}
+
+.appointment-form form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+
+
+}
+
+.appointment-form input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #F1F8FF;
+    padding: 0 10px;
+    margin: 2% 0%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    outline: none;
+}
+
+.appointment-form textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+    background-color: #F1F8FF;
+    padding: 0 10px;
+    margin: 2% 0%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    outline: none;
+
+}
+
+.google-maps {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+
+}
+
+/* Contact Us Section End*/
+
+/* Footer Section Start*/
+
+.footer {
+    display: flex;
+    background-color: #355592;
+    color: #FFFFFF;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 0% 15%;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.footer-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: left;
+    gap: 5px;
+    padding: 0% 2%;
+    margin: 1% 0%;
+}
+
+.footer-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: left;
+    padding: 0% 20%;
+    margin: 2% 0%;
+}
+
+.footer-links h1 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin: 2% 0%;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-links a:hover {
+    color: #F39C12;
+    border-radius: 7px;
+    transition: 0.7s;
+}
+
+.footer-links ul li {
+    list-style: none;
+    margin: 7% 0%;
+}
+
+
+/* Footer Section End*/
+
+
+/* Responsive Start */
+
+@media all and (min-width: 1440px) {
+    .mobile-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+
+}
+
+@media all and (min-width: 1044px) and (max-width: 1440px) {
+    .mobile-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .trainer-cards {
+        gap: 2%;
+    }
+
+    .purchase-cards {
+        width: 40%;
+    }
+
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1044px) {
+    .mobile-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .power {
+        margin-top: 30%;
+    }
+
+    .info-cards{
+        padding: 2% 10%;
+    }
+
+    .our-classes {
+        flex-wrap: wrap;
+        padding: 2% 1%;
+    }
+
+    .classes-h {
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2% 10%;
+    }
+
+    .classes-h p {
+        padding: 0% 25%;
+
+    }
+
+    .classes-cards {
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 2% 1%;
+    }
+
+    .classes-hero {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 2% 3%;
+    }
+
+    .classes-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 2% 0%;
+    }
+
+    .info-yoga {
+        width: 100%;
+        padding: 2% 5%;
+        align-items: center;
+    }
+
+    .info-yoga p {
+        font-size: 15px;
+    }
+
+    #week-program {
+        width: 100%;
+    }
+
+    .info-yoga h1 {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .purchase-cards {
+        flex-wrap: wrap;
+    }
+
+    .purchase {
+        padding: 0% 1%;
+    }
+
+    .purchase-hero {
+        padding: 2% 1%;
+    }
+
+    /* TRAİNER SECTİON START*/
+
+    .trainers {
+        padding: 2% 1%;
+    }
+
+    .trainer-hero {
+        padding: 2% 1%;
+    }
+
+    .trainer-cards {
+        gap: 5%;
+        padding: 2% 2%;
+        flex-wrap: wrap;
+    }
+
+    .cards {
+        margin: 2% 1%;
+    }
+
+    /* TRAİNER SECTİON END*/
+
+    .bmi-calculator {
+        gap: 6%;
+    }
+
+    /* TRAİNER SECTİON END*/
+
+
+    .contact-us {
+
+        padding: 0% 3%;
+
+    }
+
+    .contact-info {
+        font-size: larger;
+        font-weight: 800;
+        flex-wrap: wrap;
+        padding: 2% 25%;
+        gap: 25px;
+    }
+
+    .contact-form {
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 2% 22%;
+    }
+
+    .form-info-content {
+        gap: 25px;
+
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .power {
+        margin-top: 25%;
+    }
+
+    .info-cards{
+        padding: 2% 8%;
+    }
+
+    .purchase-cards {
+        flex-wrap: wrap;
+    }
+
+    .purchase {
+        padding: 0% 1%;
+    }
+
+    .purchase-hero {
+        padding: 2% 1%;
+    }
+
+
+
+    /* TRAİNER SECTİON START*/
+
+    .trainers {
+        padding: 2% 1%;
+    }
+
+    .trainer-hero {
+        padding: 2% 1%;
+    }
+
+    .trainer-cards {
+        gap: 5%;
+        padding: 2% 2%;
+        flex-wrap: wrap;
+    }
+
+    .cards {
+        margin: 2% 1%;
+    }
+
+    /* TRAİNER SECTİON END*/
+
+    .our-classes {
+        flex-wrap: wrap;
+        padding: 2% 1%;
+    }
+
+    .classes-h {
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2% 10%;
+    }
+
+    .classes-h p {
+        padding: 0% 25%;
+
+    }
+
+    .classes-cards {
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 2% 1%;
+    }
+
+    .classes-hero {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 2% 3%;
+    }
+
+    .classes-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 2% 0%;
+    }
+
+    .info-yoga {
+        width: 100%;
+        padding: 2% 5%;
+        align-items: center;
+    }
+
+    .info-yoga p {
+        font-size: 15px;
+    }
+
+    #week-program {
+        width: 100%;
+    }
+
+    .info-yoga h1 {
+        width: 100%;
+        font-size: 25px;
+    }
+
+
+
+    .bmi-calculator {
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 2% 1%;
+    }
+
+    .input-bmi {
+        flex-wrap: wrap;
+    }
+
+    .contact-us {
+
+        padding: 0% 3%;
+
+    }
+
+    .contact-info {
+        font-size: larger;
+        font-weight: 800;
+        flex-wrap: wrap;
+        padding: 2% 25%;
+        gap: 25px;
+    }
+
+    .contact-form {
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 2% 22%;
+    }
+
+    .form-info-content {
+        gap: 25px;
+
+    }
+
+    .footer {
+        padding: 0% 3%;
+    }
+
+    .footer-links {
+        padding: 0% 5%;
+    }
+
+    .review {
+        font-size: larger;
+        font-weight: 800;
+        padding: 5% 1%;
+    }
+
+    .review-hero {
+        padding: 2% 0%;
+    }
+
+    .review-cards {
+        flex-wrap: wrap;
+        padding: 2% 0%;
+        gap: 35px;
+    }
+
+    .r-card-bottom {
+        padding: 3% 6%;
+        margin: 2% 0%;
+    }
+
+    .trainer-info {
+        font-size: larger;
+        font-weight: 800;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .nav-links {
+        display: none;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        padding: 0% 3%;
+    }
+
+    .header img {
+        width: 85%;
+    }
+
+    .navigation {
+        padding: 1% 5%;
+    }
+
+    .hero-text {
+        flex-wrap: wrap;
+        padding: 5% 1%;
+    }
+
+    .power-h1 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .power-h1 span {
+        margin-left: 0.3em;
+    }
+
+    .power {
+        margin-top: 130px;
+    }
+
+    .power-p {
+        font-size: 20px;
+        padding: 0% 5%;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
+
+    #signup-b {
+        width: 100%;
+        padding: 1% 5%;
+        margin-right: 0%;
+        text-align: left;
+    }
+
+    #detail-b {
+        width: 100%;
+        padding: 1% 5%;
+        margin-right: 0%;
+        text-align: left;
+    }
+
+    .info-cards {
+        flex-wrap: wrap;
+        padding: 2% 1%;
+        gap: 25px;
+    }
+
+    .our-classes {
+        flex-wrap: wrap;
+        padding: 2% 1%;
+    }
+
+    .classes-h {
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2% 10%;
+    }
+
+    .classes-h p {
+        padding: 0% 25%;
+
+    }
+
+    .classes-cards {
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 2% 1%;
+    }
+
+    .classes-hero {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 2% 3%;
+    }
+
+    .classes-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 2% 0%;
+    }
+
+    .info-yoga {
+        width: 100%;
+        padding: 2% 5%;
+        align-items: center;
+    }
+
+    .info-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .info-img img {
+        width: 100%;
+    }
+
+    .info-yoga p {
+        font-size: 15px;
+    }
+
+    #week-program {
+        width: 100%;
+    }
+
+    .info-yoga h1 {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .purchase-cards {
+
+        flex-wrap: wrap;
+
+    }
+
+    .purchase-cards .p-card {
+        width: 350px;
+    }
+
+    .p-card img {
+        width: 350px;
+    }
+
+    .purchase {
+        font-size: larger;
+        font-weight: 800;
+        padding: 0% 1%;
+    }
+
+    .add-to-cart {
+        width: 100%;
+    }
+
+    .add-to-cart button {
+        width: 100%;
+    }
+
+    .purchase-hero {
+        padding: 2% 1%;
+    }
+
+    .review {
+        font-size: larger;
+        font-weight: 800;
+        padding: 5% 1%;
+    }
+
+    .review-hero {
+        padding: 2% 0%;
+    }
+
+    .review-cards {
+        flex-wrap: wrap;
+        padding: 2% 0%;
+        gap: 35px;
+    }
+
+    .r-card-bottom {
+        padding: 3% 6%;
+        margin: 2% 0%;
+    }
+
+    .contact-us {
+
+        padding: 0% 3%;
+
+    }
+
+    .contact-info {
+        font-size: larger;
+        font-weight: 800;
+        flex-wrap: wrap;
+        padding: 2% 28%;
+        gap: 25px;
+    }
+
+    .contact-form {
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 2% 28%;
+    }
+
+    .form-info-content {
+        gap: 25px;
+
+    }
+
+    .footer {
+        padding: 0% 3%;
+    }
+
+    .footer-links {
+        padding: 0% 5%;
+    }
+
+
+    /* TRAİNER SECTİON START*/
+    .trainers {
+        padding: 2% 1%;
+    }
+
+    .trainer-hero {
+        padding: 2% 1%;
+    }
+
+    .trainer-info {
+        font-size: larger;
+        font-weight: 800;
+    }
+
+    .trainer-cards {
+        width: 100%;
+        padding: 9% 2%;
+        flex-wrap: wrap;
+    }
+
+    .cards {
+        margin: 2% 1%;
+    }
+
+
+    /* TRAİNER SECTİON END*/
+
+    .bmi-calculator {
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 2% 1%;
+    }
+
+    .info-bmi {
+        width: 80%;
+        font-size: larger;
+    }
+
+    .input-bmi {
+        flex-wrap: wrap;
+    }
+}
+
+/* Responsive End */
