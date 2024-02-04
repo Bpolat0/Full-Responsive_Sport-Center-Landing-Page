@@ -1,12 +1,13 @@
+ /*colors*/
 :root {
-    /*colors*/
+   
     --main-color: #355592;
     --hover-color: #759feb;
     --second-color: #F39C12;
     --text-color: #4E4E4E;
 }
 
-
+ /*CSS Reset*/
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +29,7 @@ section {
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background-image: url(Resimler/hero-man.jpg);
+    background-image: url(images/hero-man.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -186,7 +187,7 @@ nav img {
 /* Nav Section End */
 
 
-/* Hero Text Section Start */
+/* Header Hero Text Section Start */
 
 .hero-text {
     display: flex;
@@ -317,13 +318,11 @@ nav img {
 
 /* Info Cards Section End */
 
-/* Our Classes Info Section Start*/
-
-/* Top Box Start*/
+/* Our Classes Section Start*/
 
 #classes {
-    padding-top: 100px; /* Adjust this value as needed */
-    margin-top: 0px; /* Should be the same as padding-top */
+    padding-top: 100px;
+    margin-top: 0px; 
 }
 
 .our-classes {
@@ -371,8 +370,6 @@ nav img {
     background-color: var(--second-color);
     border-radius: 5px;
 }
-
-/* Top Box End*/
 
 /* Classes Cards Start*/
 
