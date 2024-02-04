@@ -55,8 +55,7 @@ Genel olarak, fitness merkezi landing page'inin tamamen duyarlı ve uyumlu doğa
 
 ## Canlı Önizleme
 
-
-
+ https://bpolat0.github.io/Full-Responsive_Sport-Center-Landing-Page/
 
 ## Proje Ekran Görüntüleri
 

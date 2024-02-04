@@ -55,8 +55,7 @@ Overall, the fully responsive and compatible nature of the fitness center landin
 
 ## Live Preview
 
-
-
+ https://bpolat0.github.io/Full-Responsive_Sport-Center-Landing-Page/
 
 ## Project Screenshots
 
