@@ -320,9 +320,10 @@ nav img {
 
 /* Our Classes Section Start*/
 
-#classes {
+#classes{
     padding-top: 100px;
-    margin-top: 0px; 
+    padding-bottom: 100px;
+   
 }
 
 .our-classes {
@@ -441,7 +442,7 @@ nav img {
     justify-content: center;
     align-items: center;
     text-align: left;
-    padding: 2% 2%;
+    padding: 0% 2%;
     gap: 10px;
 }
 
@@ -495,7 +496,7 @@ nav img {
     justify-content: center;
     align-items: center;
     text-align: left;
-    padding: 10% 30%;
+    padding: 5% 30%;
     gap: 200px;
     font-size: 17px;
     font-weight: 700;
@@ -566,6 +567,11 @@ nav img {
 
 /* Trainers Section Start*/
 
+#trainer{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 .trainers {
     display: flex;
     background-color: #F1F8FF;
@@ -574,7 +580,7 @@ nav img {
     align-items: center;
     text-align: center;
     gap: 3%;
-    padding: 2% 20%;
+    padding: 0% 20%;
     z-index: 1;
 }
 
@@ -586,7 +592,7 @@ nav img {
     align-items: center;
     text-align: center;
     gap: 3%;
-    padding: 2% 20%;
+    padding: 0% 20%;
     
 }
 
@@ -733,6 +739,8 @@ nav img {
     gap: 3%;
     padding: 0% 15%;
     z-index: 1;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .purchase-hero {
@@ -742,7 +750,7 @@ nav img {
     align-items: center;
     text-align: center;
     gap: 3%;
-    padding: 2% 60px;
+    padding: 0% 60px;
 }
 
 .purchase-info {
@@ -754,7 +762,7 @@ nav img {
     font-size: 17px;
     font-weight: 700;
     color: var(--text-color);
-    padding: 2% 2%;
+    padding: 0% 2%;
     gap: 10px;
 }
 
@@ -879,6 +887,11 @@ nav img {
 
 /* Review Section Start*/
 
+#review{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 .review {
     display: flex;
     background-color: #F1F8FF;
@@ -900,7 +913,7 @@ nav img {
     align-items: center;
     text-align: center;
     gap: 3%;
-    padding: 2%;
+    padding: 0%;
     color: #4E4E4E;
 }
 
@@ -920,7 +933,7 @@ nav img {
 .review-info h1 {
     font-size: 30px;
     position: relative;
-    margin: 5% auto;
+    margin: 2% auto;
     color: var(--main-color);
 }
 
@@ -1012,6 +1025,11 @@ nav img {
 
 /* Contact Us Section Start*/
 
+#contact{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 .contact-us {
     display: flex;
     background-color: #ffffff;
@@ -1039,15 +1057,14 @@ nav img {
     font-size: 17px;
     font-weight: 700;
     color: var(--text-color);
-    padding: 0% 2%;
-    margin: 1% 0%;
+    padding: 2% 2%;
     gap: 15px;
 }
 
 .contact-info h1 {
     font-size: 30px;
     position: relative;
-    margin: 5% auto;
+    margin: 2% auto;
     color: var(--main-color);
 }
 
@@ -1515,8 +1532,7 @@ nav img {
     }
 
     .contact-info {
-        font-size: larger;
-        font-weight: 800;
+        
         flex-wrap: wrap;
         padding: 2% 25%;
         gap: 25px;
@@ -1542,8 +1558,7 @@ nav img {
     }
 
     .review {
-        font-size: larger;
-        font-weight: 800;
+       
         padding: 5% 1%;
     }
 
@@ -1718,8 +1733,7 @@ nav img {
     }
 
     .purchase {
-        font-size: larger;
-        font-weight: 800;
+        
         padding: 0% 1%;
     }
 
@@ -1736,8 +1750,7 @@ nav img {
     }
 
     .review {
-        font-size: larger;
-        font-weight: 800;
+       
         padding: 5% 1%;
     }
 
@@ -1763,8 +1776,7 @@ nav img {
     }
 
     .contact-info {
-        font-size: larger;
-        font-weight: 800;
+       
         flex-wrap: wrap;
         padding: 2% 28%;
         gap: 25px;
@@ -1801,7 +1813,10 @@ nav img {
 
     .trainer-info {
         font-size: larger;
-        font-weight: 800;
+    }
+
+    .trainer-info h1 {
+        font-size: 30px;
     }
 
     .trainer-cards {
@@ -1991,8 +2006,6 @@ nav img {
     }
 
     .purchase {
-        font-size: larger;
-        font-weight: 800;
         padding: 0% 1%;
     }
 
@@ -2016,8 +2029,6 @@ nav img {
     }
 
     .review {
-        font-size: larger;
-        font-weight: 800;
         padding: 5% 1%;
     }
 
@@ -2043,8 +2054,6 @@ nav img {
     }
 
     .contact-info {
-        font-size: larger;
-        font-weight: 800;
         flex-wrap: wrap;
         padding: 2% 35%;
         gap: 25px;
@@ -2077,11 +2086,6 @@ nav img {
 
     .trainer-hero {
         padding: 2% 1%;
-    }
-
-    .trainer-info {
-        font-size: larger;
-        font-weight: 800;
     }
 
     .trainer-cards {
