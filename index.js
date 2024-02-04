@@ -36,7 +36,7 @@ const content2 = `
 <div id="btn2-content" class="classes-hero">
 
 <div class="info-img">
-    <img src="Resimler/group.webp" alt="">
+    <img src="images/group.webp" alt="">
 </div>
 
 <div class="info-yoga">
@@ -65,14 +65,14 @@ const content3 = `<div id="btn3" class="classes-hero">
 </div>
 
 <div class="info-img">
-    <img src="Resimler/solo.jpg" alt="">
+    <img src="images/solo.jpg" alt="">
 </div>
 </div>`;
 
 const content4 = `<div id="btn4" class="classes-hero">
 
 <div class="info-img">
-    <img src="Resimler/stret.webp" alt="">
+    <img src="images/stret.webp" alt="">
 </div>
 
 <div class="info-yoga">
