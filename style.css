@@ -1933,7 +1933,7 @@ nav img {
     }
 
     .classes-h p {
-        padding: 0% 25%;
+        padding: 0% 10%;
 
     }
 
@@ -2049,10 +2049,9 @@ nav img {
 
     .contact-us {
 
-        padding: 0% 3%;
+        padding: 0% 35%;
 
     }
-
     .contact-info {
         flex-wrap: wrap;
         padding: 2% 35%;
@@ -2060,12 +2059,13 @@ nav img {
     }
 
     .contact-form {
-        flex-wrap: wrap;
+        display: block;
         gap: 25px;
         padding: 2% 35%;
     }
 
     .form-info-content {
+        display: block;
         gap: 25px;
 
     }
@@ -2120,10 +2120,13 @@ nav img {
         flex-wrap: wrap;
         gap: 50px;
         padding: 2% 1%;
+        margin: 100px 0 50px 0;
+
     }
 
     .bmi-img{
         max-width: 280px;
+        margin-bottom: 50px;
     }
 
     .bmi-img img {
