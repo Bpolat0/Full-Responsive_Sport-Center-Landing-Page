@@ -1,3 +1,12 @@
+:root {
+    /*colors*/
+    --main-color: #355592;
+    --hover-color: #759feb;
+    --second-color: #F39C12;
+    --text-color: #4E4E4E;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -54,7 +63,7 @@ nav img {
 }
 
 .nav-links ul li a:hover {
-    color: #F39C12;
+    color: var(--second-color);
     border-radius: 7px;
     transition: 0.7s;
 }
@@ -68,7 +77,7 @@ nav img {
 }
 
 #join-button {
-    background-color: #F39C12;
+    background-color:var(--second-color);
     padding: 5px 20px;
     margin: 10px;
     color: #fff;
@@ -126,7 +135,7 @@ nav img {
     min-height: 100vh;
     display: block;
     z-index: 9;
-    background-color: #355592;
+    background-color: var(--main-color);
     padding-top: 120px;
     transition: 0.7s;
 }
@@ -149,12 +158,13 @@ nav img {
     padding: 12px 16px;
     color: #fff;
     text-decoration: none;
-    background-color: #6180bb;
+    background-color: var(--main-color);
+    box-shadow: 0 5px 15px rgb(0, 0, 0);
     border-radius: 7px;
 }
 
 .mobile-nav a:hover {
-    background-color: #759feb;
+    background-color: var(--hover-color);
     transition: 0.7s;
 }
 
@@ -172,14 +182,6 @@ nav img {
     color: #000000;
     transition: 0.7s;
 }
-
-
-
-
-
-
-
-
 
 /* Nav Section End */
 
@@ -199,7 +201,7 @@ nav img {
 .power {
     display: inline-block;
     box-sizing: content-box;
-    background-color: #355592;
+    background-color: var(--main-color);
     border-radius: 5px;
     padding: 0% 2%;
     margin-top: 10%;
@@ -237,7 +239,7 @@ nav img {
 #signup-b {
     display: inline-block;
     box-sizing: content-box;
-    background-color: #355592;
+    background-color: var(--main-color);
     border-radius: 2px;
     border: none;
     padding: 1% 2%;
@@ -250,9 +252,9 @@ nav img {
 }
 
 #signup-b:hover {
-    background-color: #F39C12;
+    background-color: var(--second-color);
     transition: 0.7s;
-    box-shadow: 0 5px 15px #F39C12;
+    box-shadow: 0 5px 15px var(--second-color);
 }
 
 #detail-b {
@@ -275,7 +277,7 @@ nav img {
     background-color: #ffffff;
     color: #000000;
     transition: 0.7s;
-    box-shadow: 0 5px 15px #F39C12;
+    box-shadow: 0 5px 15px var(--second-color);
 }
 
 /* Hero Text Section End */
@@ -310,7 +312,7 @@ nav img {
 .icards span {
     font-size: 30px;
     font-weight: bolder;
-    color: #355592;
+    color: var(--main-color);
 }
 
 /* Info Cards Section End */
@@ -326,7 +328,7 @@ nav img {
 
 .our-classes {
     background: linear-gradient(75deg, #FFFFFF 40%, #F6F6F6 40%);
-    color: #355592;
+    color: var(--main-color);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -345,20 +347,17 @@ nav img {
     align-items: center;
     gap: 3%;
     padding: 0% 20%;
-    font-size: 20px;
-    font-weight: 800;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-color);
 
 }
 
 .classes-h h1 {
+    font-size: 30px;
     position: relative;
     margin: 5% auto;
-}
-
-.classes-h p {
-    font-size: 15px;
-    color: #4E4E4E;
-
+    color: var(--main-color);
 }
 
 .classes-h h1::after {
@@ -369,7 +368,7 @@ nav img {
     transform: translate(-50%, -50%);
     height: 5px;
     width: 75px;
-    background-color: #F39C12;
+    background-color: var(--second-color);
     border-radius: 5px;
 }
 
@@ -385,13 +384,11 @@ nav img {
     text-align: center;
     gap: 12%;
     padding: 2% 20%;
-    font-size: 20px;
-    font-weight: 800;
 }
 
 
 .classes-cards button {
-    background-color: #355592;
+    background-color: var(--main-color);
     padding: 5px 20px;
     margin: 10px;
     color: #fff;
@@ -406,15 +403,15 @@ nav img {
 }
 
 .classes-cards button:hover {
-    background-color: #F39C12;
+    background-color: var(--second-color);
     transition: 0.7s;
-    box-shadow: 0 5px 15px #F39C12;
+    box-shadow: 0 5px 15px var(--second-color);
 }
 
 .classes-cards button.active {
-    background-color: #F39C12;
+    background-color: var(--second-color);
     transition: 0.7s;
-    box-shadow: 0 5px 15px #F39C12;
+    box-shadow: 0 5px 15px var(--second-color);
 }
 
 .classes-cards button.active::after {
@@ -431,9 +428,9 @@ nav img {
 }
 
 .classes-cards button.active::after {
-    border-top: 10px solid #F39C12;
+    border-top: 10px solid var(--second-color);
     transition: 0.7s;
-    box-shadow: 0 5px 50px #F39C12;
+    box-shadow: 0 5px 50px var(--second-color);
 }
 
 /* Classes Cards End*/
@@ -447,8 +444,6 @@ nav img {
     justify-content: center;
     align-items: center;
     text-align: left;
-    color: #4E4E4E;
-    font-size: small;
     padding: 2% 2%;
     gap: 10px;
 }
@@ -476,8 +471,9 @@ nav img {
     justify-content: center;
     align-items: left;
     text-align: left;
-    color: #4E4E4E;
-    font-size: small;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-color);
     gap: 15px;
     padding: 2% 10%;
 }
@@ -502,11 +498,11 @@ nav img {
     justify-content: center;
     align-items: center;
     text-align: left;
-    color: #4E4E4E;
-    padding: 1% 30%;
+    padding: 10% 30%;
     gap: 200px;
-    font-size: 15px;
-    font-weight: 800;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-color);
     margin: 2% 0%;
 }
 
@@ -519,7 +515,6 @@ nav img {
     align-items: left;
     text-align: left;
     gap: 15px;
-    font-size: small;
 }
 
 
@@ -527,7 +522,7 @@ nav img {
     font-size: 30px;
     font-weight: bolder;
     font-family: 'Poppins', sans-serif;
-    color: #355592;
+    color: var(--main-color);
 }
 
 .input-bmi {
@@ -559,7 +554,7 @@ nav img {
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 20px solid #F39C12;
+    border-bottom: 20px solid var(--second-color);
     /* Okun rengi */
     position: absolute;
     top: 100%;
@@ -584,8 +579,6 @@ nav img {
     gap: 3%;
     padding: 2% 20%;
     z-index: 1;
-    font-size: larger;
-    font-weight: 800;
 }
 
 .trainer-hero {
@@ -597,7 +590,7 @@ nav img {
     text-align: center;
     gap: 3%;
     padding: 2% 20%;
-    color: #4E4E4E;
+    
 }
 
 .trainer-info {
@@ -606,7 +599,9 @@ nav img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: small;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-color);
     padding: 2% 2%;
     gap: 10px;
 }
@@ -615,7 +610,7 @@ nav img {
     position: relative;
     margin: 5% auto;
     font-size: 30px;
-    color: #355592;
+    color: var(--main-color);
 }
 
 .trainer-info h1::after {
@@ -626,7 +621,7 @@ nav img {
     transform: translate(-50%, -50%);
     height: 5px;
     width: 75px;
-    background-color: #F39C12;
+    background-color: var(--second-color);
     border-radius: 5px;
 }
 
@@ -648,7 +643,7 @@ nav img {
     align-items: center;
     text-align: center;
     background-color: #FFFFFF;
-    border: solid 2px #F39C12;
+    border: solid 2px var(--second-color);
     border-radius: 7px;
     position: relative;
 
@@ -665,7 +660,7 @@ nav img {
     content: "";
     width: 100%;
     height: 104%;
-    background: #355592;
+    background: var(--main-color);
     position: absolute;
     top: 50%;
     left: 0;
@@ -678,7 +673,7 @@ nav img {
     content: "";
     width: 106%;
     height: 104%;
-    background: #355592;
+    background: var(--main-color);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -699,7 +694,7 @@ nav img {
     content: "";
     width: 100px;
     height: 1000px;
-    background: #355592;
+    background: var(--main-color);
     position: absolute;
     z-index: 2;
 }
@@ -710,7 +705,7 @@ nav img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #355592;
+    background-color: var(--main-color);
     color: #fff;
     width: 280px;
     height: 150px;
@@ -740,8 +735,6 @@ nav img {
     text-align: center;
     gap: 3%;
     padding: 0% 15%;
-    font-size: 15px;
-    font-weight: 800;
     z-index: 1;
 }
 
@@ -753,7 +746,6 @@ nav img {
     text-align: center;
     gap: 3%;
     padding: 2% 60px;
-    color: #4E4E4E;
 }
 
 .purchase-info {
@@ -762,14 +754,18 @@ nav img {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-color);
     padding: 2% 2%;
     gap: 10px;
 }
 
 .purchase-info h1 {
+    font-size: 30px;
     position: relative;
     margin: 5% auto;
-    color: #355592;
+    color: var(--main-color);
 
 }
 
@@ -781,7 +777,7 @@ nav img {
     transform: translate(-50%, -50%);
     height: 5px;
     width: 75px;
-    background-color: #F39C12;
+    background-color: var(--second-color);
     border-radius: 5px;
 }
 
@@ -844,10 +840,10 @@ nav img {
 }
 
 .p-card:hover, .add-to-cart:hover {
-    background-color: #355592;
+    background-color: var(--main-color);
     color: #ffffff;
     transition: 0.1s;
-    box-shadow: 0 5px 15px #F39C12;
+    box-shadow: 0 5px 15px var(--second-color);
     cursor: pointer;
 }
 
@@ -857,7 +853,7 @@ nav img {
 
 .p-card:hover .add-to-cart button {
     color: #ffffff;
-    background-color: #355592;
+    background-color: var(--main-color);
 }
 
 .add-to-cart img {
@@ -917,14 +913,18 @@ nav img {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-color);
     padding: 2% 2%;
     gap: 15px;
 }
 
 .review-info h1 {
+    font-size: 30px;
     position: relative;
     margin: 5% auto;
-    color: #355592;
+    color: var(--main-color);
 }
 
 .review-info h1::after {
@@ -935,7 +935,7 @@ nav img {
     transform: translate(-50%, -50%);
     height: 5px;
     width: 75px;
-    background-color: #F39C12;
+    background-color: var(--second-color);
     border-radius: 5px;
 }
 
@@ -981,7 +981,7 @@ nav img {
     justify-content: center;
     align-items: center;
     text-align: left;
-    background-color: #355592;
+    background-color: var(--main-color);
     color: #FFFFFF;
     font-weight: 400;
     padding: 3% 6%;
@@ -1039,15 +1039,19 @@ nav img {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-color);
     padding: 0% 2%;
     margin: 1% 0%;
     gap: 15px;
 }
 
 .contact-info h1 {
+    font-size: 30px;
     position: relative;
     margin: 5% auto;
-    color: #355592;
+    color: var(--main-color);
 }
 
 .contact-info h1::after {
@@ -1058,7 +1062,7 @@ nav img {
     transform: translate(-50%, -50%);
     height: 5px;
     width: 75px;
-    background-color: #F39C12;
+    background-color: var(--second-color);
     border-radius: 5px;
 }
 
@@ -1150,7 +1154,7 @@ nav img {
 
 .footer {
     display: flex;
-    background-color: #355592;
+    background-color: var(--main-color);
     color: #FFFFFF;
     flex-direction: column;
     justify-content: center;
@@ -1198,7 +1202,7 @@ nav img {
 }
 
 .footer-links a:hover {
-    color: #F39C12;
+    color: var(--second-color);
     border-radius: 7px;
     transition: 0.7s;
 }
@@ -1319,7 +1323,6 @@ nav img {
 
     .info-yoga h1 {
         width: 100%;
-        font-size: 25px;
     }
 
     .purchase-cards {
@@ -1370,8 +1373,6 @@ nav img {
     }
 
     .contact-info {
-        font-size: larger;
-        font-weight: 800;
         flex-wrap: wrap;
         padding: 2% 25%;
         gap: 25px;
@@ -1452,7 +1453,7 @@ nav img {
     }
 
     .classes-h p {
-        padding: 0% 25%;
+        padding: 0% 15%;
 
     }
 
@@ -1498,12 +1499,14 @@ nav img {
         font-size: 25px;
     }
 
-
-
     .bmi-calculator {
         flex-wrap: wrap;
         gap: 50px;
         padding: 2% 1%;
+    }
+
+    .bmi-img{
+        max-width: 450px;
     }
 
     .input-bmi {
@@ -1511,9 +1514,7 @@ nav img {
     }
 
     .contact-us {
-
         padding: 0% 3%;
-
     }
 
     .contact-info {
@@ -1564,13 +1565,10 @@ nav img {
         margin: 2% 0%;
     }
 
-    .trainer-info {
-        font-size: larger;
-        font-weight: 800;
-    }
+   
 }
 
-@media all and (max-width: 480px) {
+@media all and (min-width: 360px) and (max-width: 480px)  {
     .nav-links {
         display: none;
     }
@@ -1828,6 +1826,10 @@ nav img {
         padding: 2% 1%;
     }
 
+    .bmi-img{
+        max-width: 450px;
+    }
+
     .info-bmi {
         width: 80%;
         font-size: larger;
@@ -1836,6 +1838,310 @@ nav img {
     .input-bmi {
         flex-wrap: wrap;
     }
+}
+
+@media all and (max-width: 360px)  {
+
+    .nav-links {
+        display: none;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        padding: 0% 3%;
+    }
+
+    .header img {
+        width: 85%;
+    }
+
+    .navigation {
+        padding: 1% 5%;
+    }
+
+    .hero-text {
+        flex-wrap: wrap;
+        padding: 5% 1%;
+    }
+
+    .power-h1 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .power-h1 span {
+        margin-left: 0.3em;
+    }
+
+    .power {
+        margin-top: 130px;
+    }
+
+    .power-p {
+        font-size: 20px;
+        padding: 0% 5%;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
+
+    #signup-b {
+        width: 100%;
+        padding: 1% 5%;
+        margin-right: 0%;
+        text-align: left;
+    }
+
+    #detail-b {
+        width: 100%;
+        padding: 1% 5%;
+        margin-right: 0%;
+        text-align: left;
+    }
+
+    .info-cards {
+        flex-wrap: wrap;
+        padding: 2% 1%;
+        gap: 25px;
+    }
+
+    .our-classes {
+        flex-wrap: wrap;
+        padding: 2% 1%;
+    }
+
+    .classes-h {
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2% 10%;
+    }
+
+    .classes-h p {
+        padding: 0% 25%;
+
+    }
+
+    .classes-cards {
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 2% 1%;
+    }
+
+    .classes-hero {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 2% 3%;
+    }
+
+    .classes-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 2% 0%;
+    }
+
+    .info-yoga {
+        width: 100%;
+        padding: 2% 5%;
+        align-items: center;
+    }
+
+    .info-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .info-img img {
+        width: 100%;
+    }
+
+    .info-yoga p {
+        font-size: 15px;
+    }
+
+    #week-program {
+        width: 100%;
+    }
+
+    .info-yoga h1 {
+        width: 100%;
+        font-size: 25px;
+    }
+
+    .purchase-cards {
+
+        flex-wrap: wrap;
+
+    }
+
+    .purchase-cards .p-card {
+        width: 250px;
+    }
+
+    .p-card img {
+        width: 250px;
+    }
+
+    .purchase {
+        font-size: larger;
+        font-weight: 800;
+        padding: 0% 1%;
+    }
+
+    .add-to-cart {
+        width: 100%;
+    }
+
+    .add-to-cart button {
+        width: 100%;
+    }
+
+    .add-to-cart img {
+        width: 32px;
+        height: 100%;
+        border-radius: 7px;
+        z-index: 3;
+    }
+
+    .purchase-hero {
+        padding: 2% 1%;
+    }
+
+    .review {
+        font-size: larger;
+        font-weight: 800;
+        padding: 5% 1%;
+    }
+
+    .review-hero {
+        padding: 2% 0%;
+    }
+
+    .review-cards {
+        flex-wrap: wrap;
+        padding: 2% 0%;
+        gap: 35px;
+    }
+
+    .r-card-bottom {
+        padding: 3% 6%;
+        margin: 2% 0%;
+    }
+
+    .contact-us {
+
+        padding: 0% 3%;
+
+    }
+
+    .contact-info {
+        font-size: larger;
+        font-weight: 800;
+        flex-wrap: wrap;
+        padding: 2% 35%;
+        gap: 25px;
+    }
+
+    .contact-form {
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 2% 35%;
+    }
+
+    .form-info-content {
+        gap: 25px;
+
+    }
+
+    .footer {
+        padding: 0% 3%;
+    }
+
+    .footer-links {
+        padding: 0% 5%;
+    }
+
+
+    /* TRAİNER SECTİON START*/
+    .trainers {
+        padding: 2% 1%;
+    }
+
+    .trainer-hero {
+        padding: 2% 1%;
+    }
+
+    .trainer-info {
+        font-size: larger;
+        font-weight: 800;
+    }
+
+    .trainer-cards {
+        width: 100%;
+        max-width: 250px;
+        padding: 9% 2%;
+        flex-wrap: wrap;
+    }
+
+    .cards {
+        max-width: 250px;
+        margin: 2% 1%;
+    }
+
+    .trainer-content {
+        width: 240px;
+        height: 140px;
+    }
+
+    .cards img {
+        width: 150px;
+        max-width: 250px;
+        height: 100%;
+        border-radius: 7px;
+        z-index: 3;
+    }
+
+
+    /* TRAİNER SECTİON END*/
+
+    .bmi-calculator {
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 2% 1%;
+    }
+
+    .bmi-img{
+        max-width: 280px;
+    }
+
+    .bmi-img img {
+        width: 100%;
+        max-width: 280px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+
+    .info-bmi {
+        width: 80%;
+        font-size: larger;
+    }
+
+    .input-bmi {
+        flex-wrap: wrap;
+    }
+
 }
 
 /* Responsive End */

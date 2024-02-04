@@ -1,9 +1,9 @@
-window.onload = function() {
+window.onload = function () {
     const menuBtn = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-nav');
     const nav = document.querySelector('.navigation');
-    
-    window.onscroll = function () { 
+
+    window.onscroll = function () {
         if (document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50) {
             nav.style.backgroundColor = "rgb(53, 85, 146)";
             nav.style.transition = "0.5s";
@@ -11,20 +11,20 @@ window.onload = function() {
         } else {
             nav.style.backgroundColor = "rgba(53, 85, 146, 0)";
         }
-    
-};
+    };
 
     menuBtn.addEventListener('click', () => {
-        menuBtn.classList.toggle('is-active'); 
+        menuBtn.classList.toggle('is-active');
         mobileMenu.classList.toggle('is-active');
     });
 
-    
-
-
-}
-
-
+    mobileMenu.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+            menuBtn.classList.remove('is-active');
+            mobileMenu.classList.remove('is-active');
+        }
+    });
+};
 
 const btn1 = document.querySelector("#btn1");
 const btn2 = document.querySelector("#btn2");
@@ -97,7 +97,7 @@ btn1.addEventListener("click", (e) => {
     document.querySelector(".classes-content").innerHTML = content1;
 });
 
-btn2.addEventListener("click",(e) => {
+btn2.addEventListener("click", (e) => {
     btn2.classList.add("active");
     btn1.classList.remove("active");
     btn3.classList.remove("active");
@@ -105,7 +105,7 @@ btn2.addEventListener("click",(e) => {
     document.querySelector(".classes-content").innerHTML = content2;
 });
 
-btn3.addEventListener("click",(e) => {
+btn3.addEventListener("click", (e) => {
     btn3.classList.add("active");
     btn1.classList.remove("active");
     btn2.classList.remove("active");
@@ -113,7 +113,7 @@ btn3.addEventListener("click",(e) => {
     document.querySelector(".classes-content").innerHTML = content3;
 });
 
-btn4.addEventListener("click",(e) => {
+btn4.addEventListener("click", (e) => {
     btn4.classList.add("active");
     btn1.classList.remove("active");
     btn2.classList.remove("active");
@@ -125,58 +125,57 @@ const yourWeight = document.querySelector(".input-weight");
 const yourHeight = document.querySelector(".input-height");
 const triangle = document.querySelector(".bmi-img");
 const bmiText = document.querySelector("#your-bmi");
+const galaxyFold = window.matchMedia("(max-width: 360px)");
 
 function calculateBMI() {
-    let minBmi, maxBmi, minPercentage, maxPercentage, leftPercentage;
     let bmi = yourWeight.value / ((yourHeight.value / 100) * (yourHeight.value / 100));
+    
 
-    bmiText.innerHTML = bmi;
+    let bmiRanges = [
+        {min: 0, max: 18.5, text: "Underweight", minPercentage: 9, maxPercentage: 24},
+        {min: 18.5, max: 24.9, text: "Normal", minPercentage: 25, maxPercentage: 40},
+        {min: 25, max: 29.9, text: "Overweight", minPercentage: 42, maxPercentage: 57},
+        {min: 30, max: 35, text: "Obese", minPercentage: 58, maxPercentage: 73},
+        {min: 35, max: 40, text: "Extremely Obese", minPercentage: 75, maxPercentage: 89},
+        {min: 40, max: 100, text: "Dead", minPercentage: 89, maxPercentage: 89}
+    ];
 
-    if (bmi < 18) {
-        minBmi = 0;
-        maxBmi = 18;
-        minPercentage = 9;
-        maxPercentage = 24;
-        leftPercentage = ((bmi - minBmi) / (maxBmi - minBmi)) * (maxPercentage - minPercentage) + minPercentage;
-        bmiText.innerHTML += " Underweight";
-    } else if (bmi < 25) {
-        minBmi = 18.5;
-        maxBmi = 24.9;
-        minPercentage = 25;
-        maxPercentage = 40;
-        leftPercentage = ((bmi - minBmi) / (maxBmi - minBmi)) * (maxPercentage - minPercentage) + minPercentage;
-        bmiText.innerHTML += " Normal";
-    } else if (bmi < 30) {
-        minBmi = 25;
-        maxBmi = 29.9;
-        minPercentage = 42;
-        maxPercentage = 57;
-        leftPercentage = ((bmi - minBmi) / (maxBmi - minBmi)) * (maxPercentage - minPercentage) + minPercentage;
-        bmiText.innerHTML += " Overweight";      
-    } else if (bmi < 35) {
-        minBmi = 30;
-        maxBmi = 35;
-        minPercentage = 58;
-        maxPercentage = 73;
-        leftPercentage = ((bmi - minBmi) / (maxBmi - minBmi)) * (maxPercentage - minPercentage) + minPercentage;
-        bmiText.innerHTML += " Obese";
-    } else if (bmi < 40) {
-        minBmi = 35;
-        maxBmi = 40;
-        minPercentage = 75;
-        maxPercentage = 89;
-        leftPercentage = ((bmi - minBmi) / (maxBmi - minBmi)) * (maxPercentage - minPercentage) + minPercentage;
-        bmiText.innerHTML += " Extremely Obese";
-    } else if (bmi >= 40) {
-        minBmi = 40;
-        maxBmi = 100;
-        minPercentage = 89;
-        maxPercentage = 89;
-        leftPercentage = ((bmi - minBmi) / (maxBmi - minBmi)) * (maxPercentage - minPercentage) + minPercentage;
-        bmiText.innerHTML += " Extremely Obese";
+    let bmiRangesForMax360px = [
+        { min: 0, max: 18, text: "Underweight", minPercentage: 24, maxPercentage: 34 },
+        { min: 18.5, max: 24.9, text: "Normal", minPercentage: 35, maxPercentage: 44 },
+        { min: 25, max: 29.9, text: "Overweight", minPercentage: 45, maxPercentage: 54 },
+        { min: 30, max: 35, text: "Obese",  minPercentage: 55, maxPercentage: 64 },
+        { min: 35, max: 40, text: "Extremely Obese", minPercentage: 66, maxPercentage: 75 },
+        { min: 40, max: 100, text: "Dead", minPercentage: 75, maxPercentage: 75 }
+    ];
+
+    if (galaxyFold.matches) {
+        bmiRanges.forEach((range, index) => {
+            range.min = bmiRangesForMax360px[index].min;
+            range.max = bmiRangesForMax360px[index].max;
+            range.minPercentage = bmiRangesForMax360px[index].minPercentage;
+            range.maxPercentage = bmiRangesForMax360px[index].maxPercentage;
+        });
+    }else{
+        bmiRanges.forEach((range, index) => {
+            range.min = bmiRanges[index].min;
+            range.max = bmiRanges[index].max;
+            range.minPercentage = bmiRanges[index].minPercentage;
+            range.maxPercentage = bmiRanges[index].maxPercentage;
+        });
     }
 
+    if  (bmi < 0 || bmi > 100){
+        bmiText.innerHTML = "Please enter a valid weight and height";
+    }
+    else{
+    let bmiRange = bmiRanges.find(range => bmi >= range.min && bmi < range.max);
+    let leftPercentage = ((bmi - bmiRange.min) / (bmiRange.max - bmiRange.min)) * (bmiRange.maxPercentage - bmiRange.minPercentage) + bmiRange.minPercentage;
+
+    bmiText.innerHTML = Math.round(bmi) + " " + bmiRange.text;
     triangle.style.setProperty('--bmi-position', leftPercentage + '%');
+    }
+
 }
 
 yourHeight.addEventListener("input", calculateBMI);
@@ -194,6 +193,7 @@ yourWeight.addEventListener("input", calculateBMI);
 
 
 
- 
+
+
 
 
